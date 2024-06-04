@@ -8,6 +8,20 @@
     font-family: "Nunito Sans", sans-serif;
 }
 
+body {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode {
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(200, 15%, 8%);
+}
+
+body.dark-mode {
+    background-color: hsl(207, 26%, 17%);
+    color:  hsl(0, 0%, 100%);
+}
+
 header {
     padding: 2rem 1rem;
     display: flex;
@@ -16,7 +30,7 @@ header {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
-.mode {
+#toggle-button {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -44,27 +58,23 @@ aside {
 #search-text {
     border: none;
     background-color: transparent;
+    outline: none;
+    width: 100%;
 }
 
 #option {
     padding: 0.5rem 1rem;
     border: 1px solid #ffffff;
     border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-}
-
-#search {
-    width: 100%;
-}
-
-#option {
     width: 50%;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .data-item {
     padding: 0 0 3rem;
-    width: 80%;
     margin: 3rem;
+    width: 80%;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
@@ -80,4 +90,30 @@ img {
 .data-item p {
     padding: 0 1rem;
     line-height: 1.5rem;
+}
+
+
+
+
+@media (min-width:600px) {
+    aside {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #data-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .data-item {
+        padding: 0 0 2rem;  
+        margin: 1rem;
+        gap: 1.5rem;
+        flex: 1 1 48%;
+        flex-wrap: wrap;
+    }
 }

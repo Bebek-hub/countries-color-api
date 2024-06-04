@@ -1,3 +1,32 @@
+document.addEventListener('DOMContentLoaded', function() {
+  const toggleButton = document.getElementById('toggle-button');
+  const body = document.body;
+
+  toggleButton.addEventListener('click', function() {
+      if (body.classList.contains('light-mode')) {
+          body.classList.remove('light-mode');
+          body.classList.add('dark-mode');
+      } else {
+          body.classList.remove('dark-mode');
+          body.classList.add('light-mode');
+      }
+  });
+
+// Save mode preference in localStorage
+  if (localStorage.getItem('mode') === 'dark') {
+      body.classList.add('dark-mode');
+  } else {
+      body.classList.add('light-mode');
+  }
+
+  toggleButton.addEventListener('click', function() {
+      if (body.classList.contains('dark-mode')) {
+          localStorage.setItem('mode', 'dark');
+      } else {
+          localStorage.setItem('mode', 'light');
+      }
+  });
+});
 
 
 

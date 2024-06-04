@@ -9,34 +9,34 @@
   <body>
     <header>
       <h2>Where in the World?</h2>
-      <button class="mode">
+      <button id="toggle-button">
         <ion-icon name="moon-outline"></ion-icon>
         <p>Dark Mode</p>
       </button>
     </header>
 
-    <div id="data-container">
-      <aside>
-        <form class="search">
-          <ion-icon name="search-outline"></ion-icon>
-          <input
-            type="search"
-            placeholder="Search for a Country..."
-            id="search-text"
-          />
-        </form>
+    <aside>
+      <form class="search">
+        <ion-icon name="search-outline"></ion-icon>
+        <input
+          type="search"
+          placeholder="Search for a Country..."
+          id="search-text"
+        />
+      </form>
 
-        <select name="" placeholder="Filter by region" id="option">
-          <option value="Filter">Filter by Region</option>
-          <option value="Africa">Africa</option>
-          <option value="Asia">Asia</option>
-          <option value="America">America</option>
-          <option value="Asia">Asia</option>
-          <option value="Europe">Europe</option>
-          <option value="Oceania">Oceania</option>
-        </select>
-      </aside>
-    </div>
+      <select name="" placeholder="Filter by region" id="option">
+        <option value="Filter">Filter by Region</option>
+        <option value="Africa">Africa</option>
+        <option value="Asia">Asia</option>
+        <option value="America">America</option>
+        <option value="Asia">Asia</option>
+        <option value="Europe">Europe</option>
+        <option value="Oceania">Oceania</option>
+      </select>
+    </aside>
+
+    <div id="data-container"></div>
 
     <script src="script.js"></script>
     <script
