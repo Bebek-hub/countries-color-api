@@ -4,31 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Countries API with color theme switcher</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <header>
       <h2>Where in the World?</h2>
-      <p>Dark Mode</p>
+      <button class="mode">
+        <ion-icon name="moon-outline"></ion-icon>
+        <p>Dark Mode</p>
+      </button>
     </header>
 
-    <main id="data-container">
+    <div id="data-container">
       <aside>
-        <form name="search">
-          <input type="search" placeholder="Search for a Country..." id="" />
+        <form class="search">
+          <ion-icon name="search-outline"></ion-icon>
+          <input
+            type="search"
+            placeholder="Search for a Country..."
+            id="search-text"
+          />
         </form>
 
-        <select name="" placeholder="Filter by region" id="">
+        <select name="" placeholder="Filter by region" id="option">
+          <option value="Filter">Filter by Region</option>
           <option value="Africa">Africa</option>
+          <option value="Asia">Asia</option>
           <option value="America">America</option>
           <option value="Asia">Asia</option>
           <option value="Europe">Europe</option>
           <option value="Oceania">Oceania</option>
         </select>
       </aside>
+    </div>
 
-    </main>
-
-    <script src="./script.js"></script>
+    <script src="script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
   </body>
 </html>
